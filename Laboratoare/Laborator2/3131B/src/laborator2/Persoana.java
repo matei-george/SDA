@@ -4,6 +4,7 @@ public class Persoana {
     Persoana(){}
     private String nume;
     private String prenume;
+
     Persoana(String nume, String prenume){
         this.nume=nume;
         this.prenume=prenume;

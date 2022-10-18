@@ -1,6 +1,13 @@
 package laborator2;
 
-public class Sofer extends Persoana implements Angajat{
+import java.util.Random;
+
+public class Sofer extends Persoana{
+    public static final double salariuOrarMinim=15;
+    Random angajatID=new Random();
+    public int LimitaID=999;
+    private int tempRand=angajatID.nextInt(LimitaID);
+    public int ID=tempRand;
     public Sofer() {}
     public Sofer(String nume,String prenume){
         super(nume,prenume);
@@ -9,12 +16,10 @@ public class Sofer extends Persoana implements Angajat{
     public String toString(){
        return "Sofer "+super.toString()+" a lucrat "+this.getOreLucrateSofer()+", a parcurs "+this.getKmParcursi()+" km "+" - salariu= "+this.CalculSalariuSofer();
     }
-    @Override
     public void setNrOreLucrate(int nrOreLucrate) {
         this.nrOreLucrate=Math.max(nrOreLucrate,0);
         this.nrOreLucrate=Math.min(nrOreLucrate,nrMaxOreLucrate);
     }
-    @Override
     public double salariu() {return salariu;}
     public void setKmParcursi(int kmParcursi){
         this.kmParcursi=Math.max(kmParcursi,0);

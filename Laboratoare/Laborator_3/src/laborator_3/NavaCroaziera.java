@@ -14,7 +14,7 @@ public class NavaCroaziera extends Nava{
     @Override
     public String toString() {
         return "NavaCroaziera - nume=" +
-                getNume() + ",pavilion=" + getPavilion() +
-                ",nrPasageri=" + getNrPasageri();
+                getNume() + ", pavilion=" + getPavilion() +
+                ", nrPasageri=" + getNrPasageri();
     }
 }

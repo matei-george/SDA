@@ -1,6 +1,7 @@
 package laborator_3;
 import java.io.*;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Flota{
@@ -8,28 +9,40 @@ public class Flota{
     private int nrNave=0;
     public Flota(){}
     public Flota(String numeFisier) {
-        System.out.println("Flota:");
         File fisier = new File(numeFisier);
         int linecounter = 1;
+        System.out.println("Flota:");
         try {
             Scanner scanner = new Scanner(fisier);
-            while(scanner.hasNextLine()){
+            while(scanner.hasNext()){
                 if(linecounter==1)
                     scanner.nextLine();
                 else {
                     String filedata=scanner.nextLine();
-                    String[] filedataArguments=filedata.split("[, ]+");
-                    if(filedataArguments[2]=="NavaCroaziera")
-                        new NavaCroaziera();
-                    if(filedataArguments[2]=="NavaFeribot")
-                        new Feribot();
-                    if(filedataArguments[2]=="NavaCargou")
-                        new Cargou();
-                    System.out.println(filedata);
+                    String arr[]= filedata.split(", ");
+                    String nume=arr[0];
+                    String pavilion=arr[1];
+                    String tip=arr[2];
+                    if(tip.equals("NavaCroaziera")){
+                        int nrPasageri=Integer.parseInt(arr[3]);
+                        NavaCroaziera nav1=new NavaCroaziera(nrPasageri,nume,pavilion);
+                        adaugaNava(nav1);
+                    }
+                    if(tip.equals("Cargo")){
+                        int capacitateIncarcare=Integer.parseInt(arr[3]);
+                        Cargou car1=new Cargou(capacitateIncarcare,nume,pavilion);
+                        adaugaNava(car1);
+                    }
+                    if(tip.equals("Feribot")){
+                        int nrPasageri=Integer.parseInt(arr[3]);
+                        int nrAuto=Integer.parseInt(arr[4]);
+                        Feribot fer1=new Feribot(nrAuto,nrPasageri,nume,pavilion);
+                        adaugaNava(fer1);
+                    }
                 }
                 linecounter++;
             }
-        }catch(Exception e){
+        }catch(FileNotFoundException e){
             e.printStackTrace();
         }
     }
@@ -46,8 +59,10 @@ public class Flota{
     }
     public void utilizare(){
         System.out.println("Utilizare Flota :");
-        for(int i=0;i<nrNave;i++)
+        for(int i=0;i<nrNave;i++){
+            System.out.print(nave[i].getNume() + " - ");
             nave[i].utilizare();
+        }
     }
     @Override
     public String toString(){
@@ -56,6 +71,17 @@ public class Flota{
             str.append(i+1).append(". ").append(nave[i].toString()).append('\n');
         }
         return str.toString();
+    }
+    // Punctul 4 incercare
+    // TODO > Fix exception on punctul 4
+    public boolean toStringFlota(boolean dupaNume){
+        if(dupaNume==true)
+            for(int i=0;i<nave.length;i++)
+                Arrays.sort(nave[i].getNume().toCharArray());
+        else
+            for(int i=0;i<nave.length;i++)
+                Arrays.sort(nave[i].getPavilion().toCharArray());
+        return dupaNume;
     }
     public static void main(String[] args){
         // Punctul 1
@@ -81,6 +107,14 @@ public class Flota{
         Flota flota2=new Flota("flota.txt");
         System.out.println(flota2);
         flota2.utilizare();
+        System.out.println();
+
+        //Punctul 4
+        System.out.println("---------  Punctul 4  ----------");
+        flota2.toStringFlota(true);
+        System.out.println(flota2);
+        flota2.toStringFlota(false);
+        System.out.println(flota2);
     }
 
 

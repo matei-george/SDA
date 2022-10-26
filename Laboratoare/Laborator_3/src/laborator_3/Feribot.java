@@ -12,6 +12,7 @@ public class Feribot extends NavaCroaziera{
     public String toString() {
         return "NavaFeribot - nume=" +
                 getNume() + ",pavilion=" + getPavilion() +
+                ",nrPasageri" + getNrPasageri() +
                 ",nrAuto" + getNrAuto();
     }
     public void utilizare(){

@@ -110,11 +110,12 @@ public class Flota{
         System.out.println();
 
         //Punctul 4
-        System.out.println("---------  Punctul 4  ----------");
+        System.out.println("---------  Punctul 4 Incomplet  ----------");
         flota2.toStringFlota(true);
         System.out.println(flota2);
         flota2.toStringFlota(false);
         System.out.println(flota2);
+        System.out.println("---------  Punctul 4 Incomplet  ----------");
     }
 
 

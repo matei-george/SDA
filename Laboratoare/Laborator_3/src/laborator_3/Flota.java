@@ -73,13 +73,13 @@ public class Flota{
         return str.toString();
     }
     // Punctul 4 incercare
-    // TODO > Fix exception on punctul 4
+    // TODO > Fix sorting problem.
     public boolean toStringFlota(boolean dupaNume){
         if(dupaNume==true)
-            for(int i=0;i<nave.length;i++)
+            for(int i=1;i<nrNave;i++)
                 Arrays.sort(nave[i].getNume().toCharArray());
         else
-            for(int i=0;i<nave.length;i++)
+            for(int i=0;i<nrNave;i++)
                 Arrays.sort(nave[i].getPavilion().toCharArray());
         return dupaNume;
     }

@@ -8,7 +8,7 @@ public abstract class Nava {
         this.nume = nume;
         this.pavilion = pavilion;
     }
-    public Nava(){nume="";pavilion="";}
+    public Nava(){}
     public String getNume(){return nume;}
     public String getPavilion(){return pavilion;}
     public void setNume(String nume){this.nume=nume;}

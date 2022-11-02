@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="852b7daa-3208-4700-80d8-27f2cfde6263" name="Changes" comment="" />
+    <list default="true" id="852b7daa-3208-4700-80d8-27f2cfde6263" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_1_2_11/src/laborator_1/EcuatieGrad1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_1_2_11/src/laborator_1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_1_2_11/src/laborator_1/Poligon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_1_2_11/src/laborator_1/Punct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_1_2_11/src/laborator_1/date.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Laborator1/Poligon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Laborator1/Poligon.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,7 +37,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Programare/SDA/Laboratoare/Laborator2/3131B"
+    "last_opened_file_path": "D:/Programare/SDA/Laboratoare/Laborator1"
   }
 }]]></component>
   <component name="RunManager" selected="Application.Poligon">

@@ -41,13 +41,6 @@ public class Pachet{
         System.out.println(p1);
         System.out.println("Pret="+p1.pretPachet());
 
-        Pachet p2 = new Pachet(new Avion(150), true, true);
-        System.out.println(p2);
-        System.out.println("Pret="+p2.pretPachet());
-
-        Pachet p3 = new Pachet(new Racheta(300), true, true);
-        System.out.println(p3);
-        System.out.println("Pret="+p3.pretPachet());
 
     }
 }

@@ -10,4 +10,18 @@ public class ListaGenerica2<T> extends ListaGenerica<T>{
             primul=ultimul=null;
         return info;
     }
+    public T eliminaUltimul()
+   {
+        if (ultimul == null) return null;
+            elementCounter--;
+         T info = ultimul.getInfo();
+        if(ultimul.getUrm()==null) {
+           primul=ultimul=null;
+           return info;
+       }
+       ultimul = (Element<T>) ultimul.getInfo();
+       return info;
+    }
+
+
 }

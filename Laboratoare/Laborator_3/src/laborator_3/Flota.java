@@ -77,10 +77,10 @@ public class Flota{
     public boolean toStringFlota(boolean dupaNume){
         if(dupaNume==true)
             for(int i=1;i<nrNave;i++)
-                Arrays.sort(nave[i].getNume().toCharArray());
+                Arrays.sort(nave[i].getNume().toLowerCase().toCharArray());
         else
             for(int i=0;i<nrNave;i++)
-                Arrays.sort(nave[i].getPavilion().toCharArray());
+                Arrays.sort(nave[i].getPavilion().toLowerCase().toCharArray());
         return dupaNume;
     }
     public static void main(String[] args){

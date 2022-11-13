@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb5ae11b-847e-4844-af82-2619d8b8201b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/Lab_2_3_11.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/date.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/CalculSalarii.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/Firma.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/IAngajat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/Inginer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/Persoana.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Pregatire_test/Lab_2_3_11/src/laborator_2/Sofer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/3131B/src/laborator2/Angajat.java" beforeDir="false" afterPath="$PROJECT_DIR$/3131B/src/laborator2/Angajat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Laborator_3.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Laborator_4.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Laborator_5.7z" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

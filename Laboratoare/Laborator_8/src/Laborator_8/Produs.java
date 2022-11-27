@@ -6,6 +6,8 @@ public class Produs {
     public int codProdus,pret,cantitate;
     public String denumire;
 
+    //Ctori
+    public Produs(){}
     public Produs(int codProdus, String denumire,int pret,int cantitate) {
         this.codProdus = codProdus;
         this.pret = pret;
@@ -13,7 +15,7 @@ public class Produs {
         this.denumire = denumire;
     }
 
-
+    //Getteri si Setteri
     public void setCodProdus(int codProdus) {
         this.codProdus = codProdus;
     }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="panouGrafic" alignment="CENTER" prefHeight="552.0" prefWidth="627.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <HBox fx:id="panou" prefHeight="27.0" prefWidth="670.0" spacing="9.0" translateY="-57.0">
+         <children>
+            <TextField fx:id="nodCrt" prefHeight="14.0" prefWidth="155.0" />
+             <Button fx:id="btnInserare" mnemonicParsing="false" prefHeight="26.0" prefWidth="73.0" text="Inserare" textAlignment="CENTER" />
+             <Button fx:id="btnCauta" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" text="Cauta" textAlignment="CENTER" />
+             <Button fx:id="btnEliminare" mnemonicParsing="false" prefHeight="26.0" prefWidth="76.0" text="Elimina" textAlignment="CENTER" />
+             <Button fx:id="btnOpen" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Citeste Fisier" textAlignment="CENTER" />
+            <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="26.0" prefWidth="157.0" text="Salvare in fisier" textAlignment="CENTER">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox fx:id="transversari" prefHeight="275.0" prefWidth="672.0" spacing="14.0">
+         <children>
+            <ListView fx:id="ListView" prefHeight="267.0" prefWidth="202.0" />
+            <TextArea fx:id="TextArea" prefHeight="290.0" prefWidth="390.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

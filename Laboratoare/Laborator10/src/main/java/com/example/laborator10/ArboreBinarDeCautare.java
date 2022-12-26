@@ -84,9 +84,6 @@ public class ArboreBinarDeCautare<E extends Comparable<? super E>> {
             return containsRecursiv(nodcrt.dr, val);
         }
     }
-    // =========================================================
-    // tarversari ale arborelui (preordine-RSD si inordine-SRD)
-    // =========================================================
     public String SRD(){
         SRDrec(radacina);
         System.out.println();

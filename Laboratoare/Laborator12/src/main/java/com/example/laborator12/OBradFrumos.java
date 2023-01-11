@@ -1,8 +1,10 @@
 package com.example.laborator12;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.zip.CheckedOutputStream;
 
 import javafx.application.Application;
@@ -10,6 +12,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -17,6 +20,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 public class OBradFrumos extends Application {
@@ -32,6 +36,7 @@ public class OBradFrumos extends Application {
     private static Label empty;
     private Label eticValSelectata;
     private ListaMosului listaMosului;
+    TextArea zonaText = new TextArea();
 
     public OBradFrumos() throws FileNotFoundException {
     }
@@ -53,6 +58,7 @@ public class OBradFrumos extends Application {
         //TODO
         return list;
     }
+
     Slider getSlider() {
         Slider valMedie=new Slider(0,10,0);
         valMedie.setMajorTickUnit(0.5);
@@ -91,7 +97,7 @@ public class OBradFrumos extends Application {
         Localitate=new Label("Localitate");
         CitesteFisier=new Button("Citeste din fisier");
         panou.setTop(new HBox(25,Nume,NumeBox,Localitate,LocalitateBox,CitesteFisier));
-        panou.setLeft(new HBox(5, empty,getTextArea("")));
+        panou.setLeft(new HBox(5, empty,zonaText));
         panou.setRight(new HBox(imageView));
         eticValSelectata = new Label("Stud. cu Media >=" );
         panou.setBottom(new HBox(1, valMedie, eticValSelectata));
@@ -106,8 +112,24 @@ public class OBradFrumos extends Application {
         primaryStage.setScene(scena);
         primaryStage.setTitle("O, brad frumos!");
         primaryStage.show();
+
+        CitesteFisier.setOnAction(e -> {
+            String filename = "D:\\Programare\\SDA\\Laboratoare\\Laborator12\\src\\main\\java\\date.txt";
+            try {
+                Scanner input = new Scanner(new File(filename));
+                while (input.hasNext()) {
+                    zonaText.appendText(input.nextLine() + '\n');
+                }
+                input.close();
+            } catch (FileNotFoundException ex) {
+                System.out.println("File not found: " + filename);
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
+            }
+        });
     }
     public static void main(String[] args) {
         launch(args);
     }
 }
+
